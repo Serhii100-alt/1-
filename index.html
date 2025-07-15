@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lity Beauty Studio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: linear-gradient(90deg, #9f7aea, #805ad5);
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        header img {
+            height: 60px;
+        }
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 3rem 1rem;
+            background-color: #f3e8ff;
+        }
+        .section:nth-child(even) {
+            background-color: #e9d8fd;
+        }
+        .container {
+            flex: 1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .image-side {
+            flex: 1;
+            min-width: 300px;
+            background: url("lity_background_resized.jpg") no-repeat right center;
+            background-size: cover;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input, select {
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .phone-wrapper {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        .phone-wrapper span {
+            padding: 0.8rem;
+            background-color: #eee;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .phone-wrapper input {
+            flex: 1;
+        }
+        button {
+            padding: 1rem;
+            font-size: 1rem;
+            background-color: #9f7aea;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #805ad5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="lity_logo_cropped.png" alt="Logo">
+        <div>
+            <h1>Lity Beauty Studio</h1>
+            <p>Zielona Góra | ul. Westerplatte 9</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2>Zapisz się na wizytę</h2>
+            <form action="#" method="post">
+                <label for="service">Wybierz usługę:</label>
+                <select id="service" name="service">
+                    <option value="lashes">Nadłużanie rzęs</option>
+                    <option value="laser">Depilacja laserowa</option>
+                    <option value="removal">Usuwanie tatuażu</option>
+                    <option value="pmu">Usuwanie makijażu permanentnego</option>
+                </select>
+
+                <label for="date">Data:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Godzina:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="phone">Numer telefonu:</label>
+                <div class="phone-wrapper">
+                    <span>+48</span>
+                    <input type="tel" id="phone" name="phone" placeholder="123456789" pattern="\d{9}" required>
+                </div>
+
+                <button type="submit">Zarezerwuj</button>
+            </form>
+        </div>
+        <div class="image-side"></div>
+    </section>
+</body>
+</html>

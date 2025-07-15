@@ -11,19 +11,21 @@
             background-color: #f9f9f9;
         }
         header {
-            background: linear-gradient(90deg, #9f7aea, #805ad5);
+            background: url("lity_background_resized.jpg") no-repeat center/cover;
             color: white;
-            padding: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+            padding: 3rem 1rem 2rem;
+            text-align: center;
         }
         header img {
-            height: 60px;
+            height: 80px;
+        }
+        .header-inner {
+            background-color: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
         }
         .section {
-            display: flex;
-            flex-wrap: wrap;
             padding: 3rem 1rem;
             background-color: #f3e8ff;
         }
@@ -31,15 +33,8 @@
             background-color: #e9d8fd;
         }
         .container {
-            flex: 1;
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
-        }
-        .image-side {
-            flex: 1;
-            min-width: 300px;
-            background: url("lity_background_resized.jpg") no-repeat right center;
-            background-size: cover;
         }
         form {
             display: flex;
@@ -86,8 +81,8 @@
 </head>
 <body>
     <header>
-        <img src="lity_logo_cropped.png" alt="Logo">
-        <div>
+        <div class="header-inner">
+            <img src="lity_logo_cropped.png" alt="Logo">
             <h1>Lity Beauty Studio</h1>
             <p>Zielona Góra | ul. Westerplatte 9</p>
         </div>
@@ -114,13 +109,12 @@
                 <label for="phone">Numer telefonu:</label>
                 <div class="phone-wrapper">
                     <span>+48</span>
-                    <input type="tel" id="phone" name="phone" placeholder="123456789" pattern="\d{9}" required>
+                    <input type="tel" id="phone" name="phone" placeholder="123456789" pattern="\d{9}" maxlength="9" required>
                 </div>
 
                 <button type="submit">Zarezerwuj</button>
             </form>
         </div>
-        <div class="image-side"></div>
     </section>
 </body>
 </html>
